@@ -84,6 +84,7 @@ endfunction
 call s:hl("ColorColumn",    { "bg": s:bg1 })
 call s:hl("Constant",       { "fg": s:quartz })
 call s:hl("CursorLine",     { "bg": s:bg1 })
+call s:hl("CursorLineNr",   { "fg": s:yellow })
 call s:hl("DiffAdd",        { "fg": s:green })
 call s:hl("DiffChange",     { "fg": s:niagara })
 call s:hl("DiffDelete",     { "fg": s:red })
