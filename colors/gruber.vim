@@ -131,7 +131,7 @@ call s:hl("TabLine",        { "fg": s:fgnd, "bg": s:bgnd })
 call s:hl("TabLineSel",     { "fg": s:fgnd, "bg": s:bg4, "style": s:bold })
 call s:hl("TabLineFill",    { "bg": s:bg1 })
 call s:hl("Search",         { "fg": s:fg1, "bg": s:bg4 })
-call s:hl("CurSearch",      { "fg": s:black, "bg": s:yellow, "style": s:bold })
+call s:hl("CurSearch",      { "fg": s:black, "bg": s:white, "style": s:bold })
 
 "syntax
 call s:hl("Comment",        { "fg": s:brown })
