@@ -16,6 +16,7 @@ hi! link SignColumn FoldColumn
 hi! link Terminal Normal
 hi! link Boolean Number
 hi! link TitleBar Normal
+hi! link IncSearch CurSearch
 
 "palette
 let s:fgnd    = ["#e4e4ef", "254"]
@@ -103,7 +104,7 @@ call s:hl("NonText",        { "fg": s:bg2 })
 call s:hl("Normal",         { "fg": s:fgnd, "bg": s:bgnd })
 call s:hl("Pmenu",          { "fg": s:fgnd, "bg": s:bg1 })
 call s:hl("PmenuSbar",      { "bg": s:bg1 })
-call s:hl("PmenuSel",       { "fg": s:bgnd, "bg": s:yellow, "style": s:bold })
+call s:hl("PmenuSel",       { "fg": s:fgnd, "bg": s:bg_1 })
 call s:hl("PmenuThumb",     { "bg": s:bgnd })
 call s:hl("Question",       { "fg": s:niagara })
 call s:hl("Special",        { "fg": s:fgnd })
@@ -129,6 +130,8 @@ call s:hl("diffSubname",    { "fg": s:niagara })
 call s:hl("TabLine",        { "fg": s:fgnd, "bg": s:bgnd })
 call s:hl("TabLineSel",     { "fg": s:fgnd, "bg": s:bg4, "style": s:bold })
 call s:hl("TabLineFill",    { "bg": s:bg1 })
+call s:hl("Search",         { "fg": s:fg1, "bg": s:bg4 })
+call s:hl("CurSearch",      { "fg": s:black, "bg": s:yellow, "style": s:bold })
 
 "syntax
 call s:hl("Comment",        { "fg": s:brown })
