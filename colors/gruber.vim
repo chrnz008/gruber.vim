@@ -14,6 +14,8 @@ let g:colors_name = "gruber"
 "links
 hi! link SignColumn FoldColumn
 hi! link Terminal Normal
+hi! link Boolean Number
+hi! link TitleBar Normal
 
 "palette
 let s:fgnd    = ["#e4e4ef", "254"]
@@ -42,6 +44,7 @@ let s:wisteria= ["#9e95c7", "98" ]
 let s:bold      = "bold"
 let s:italic    = "italic"
 let s:underline = "underline"
+let s:undercurl = "undercurl"
 
 function! s:hl(group, attrs) abort
     if has_key(a:attrs, "fg")
@@ -85,7 +88,7 @@ call s:hl("DiffAdd",        { "fg": s:green })
 call s:hl("DiffChange",     { "fg": s:niagara })
 call s:hl("DiffDelete",     { "fg": s:red })
 call s:hl("DiffText",       { "fg": s:niagara, "style": s:underline })
-call s:hl("Directory",      { "fg": s:niagara })
+call s:hl("Directory",      { "fg": s:niagara, "style": s:bold })
 call s:hl("EndOfBuffer",    { "fg": s:bgnd })
 call s:hl("Error",          { "fg": s:red })
 call s:hl("ErrorMsg",       { "fg": s:red })
@@ -95,7 +98,7 @@ call s:hl("Ignore",         { "fg": s:bgnd })
 call s:hl("LineNr",			{ "fg": s:bg4})
 call s:hl("MatchParen",     { "bg": s:bg4,"style": s:bold })
 call s:hl("MoreMsg",        { "fg": s:green })
-call s:hl("NonText",        { "fg": s:niagara })
+call s:hl("NonText",        { "fg": s:bg2 })
 call s:hl("Normal",         { "fg": s:fgnd, "bg": s:bgnd })
 call s:hl("Pmenu",          { "fg": s:fgnd, "bg": s:bg1 })
 call s:hl("PmenuSbar",      { "bg": s:bg1 })
@@ -106,10 +109,10 @@ call s:hl("Special",        { "fg": s:fgnd })
 call s:hl("SpecialChar",    { "fg": s:quartz })
 call s:hl("SpecialComment", { "fg": s:brown })
 call s:hl("SpecialKey",     { "fg": s:niagara })
-call s:hl("SpellBad",       { "fg": s:red, "style": s:underline })
-call s:hl("SpellCap",       { "fg": s:niagara, "style": s:underline })
-call s:hl("SpellLocal",     { "fg": s:yellow, "style": s:underline })
-call s:hl("SpellRare",      { "style": s:underline })
+call s:hl("SpellBad",       { "guisp": s:red[0], "style": s:undercurl })
+call s:hl("SpellCap",       { "guisp": s:yellow[0], "style": s:undercurl })
+call s:hl("SpellLocal",     { "guisp": s:niagara[0], "style": s:undercurl })
+call s:hl("SpellRare",      { "guisp": s:wisteria[0], "style": s:undercurl })
 call s:hl("Statement",      { "fg": s:yellow, "style": s:bold })
 call s:hl("StatusLine",     { "fg": s:fgnd, "bg": s:bg1, "style": s:bold })
 call s:hl("StatusLineNC",   { "fg": s:fgnd, "bg": s:bg1 })
@@ -122,12 +125,17 @@ call s:hl("WildMenu",       { "fg": s:bgnd, "bg": s:yellow, "style": s:bold })
 call s:hl("diffAdded",      { "fg": s:green })
 call s:hl("diffRemoved",    { "fg": s:red })
 call s:hl("diffSubname",    { "fg": s:niagara })
+call s:hl("TabLine",        { "fg": s:fgnd, "bg": s:bgnd })
+call s:hl("TabLineSel",     { "fg": s:fgnd, "bg": s:bg4, "style": s:bold })
+call s:hl("TabLineFill",    { "bg": s:bg1 })
 
 "syntax
 call s:hl("Comment",        { "fg": s:brown })
 call s:hl("String",         { "fg": s:green })
+call s:hl("Character",      { "fg": s:green })
 call s:hl("Identifier",     { "fg": s:fg1 })
 call s:hl("Function",       { "fg": s:niagara })
-" call s:hl("Keyword",        { "fg": s:yellow ,"style": s:bold })
+call s:hl("Keyword",        { "fg": s:yellow ,"style": s:bold })
 call s:hl("PreProc",        { "fg": s:quartz })
 call s:hl("Type",           { "fg": s:quartz })
+call s:hl("Number",         { "fg": s:white  })
