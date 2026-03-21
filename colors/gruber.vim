@@ -1,3 +1,7 @@
+" Name:         gruber
+" Description:  port of gruber-darker theme
+" Author:       Charan Mandati <charancuz008@gmail.com>
+
 highlight clear
 
 if exists("syntax_on")
@@ -7,19 +11,33 @@ endif
 set background=dark
 let g:colors_name = "gruber"
 
-
+"links
 hi! link SignColumn FoldColumn
+hi! link Terminal Normal
 
-let s:black  = ["#181818", "234"]
-let s:blue   = ["#87afd7", "110"]
-let s:brown  = ["#af875f", "137"]
-let s:cyan   = ["#afd7af", "151"]
-let s:gray   = ["#262626", "235"]
-let s:green  = ["#87d75f", "113"]
-let s:red    = ["#ff5f5f", "203"]
-let s:white  = ["#e4e4ef", "254"]
-let s:yellow = ["#ffdd33", "220"]
-let s:mud    = ["#52494e", "239"] 
+"palette
+let s:fgnd    = ["#e4e4ef", "254"]
+let s:fg1     = ["#f4f4ff", "255"]
+let s:fg2     = ["#f5f5f5", "255"]
+let s:white   = ["#ffffff", "231"]
+let s:black   = ["#000000", "16" ]
+let s:bg_1    = ["#101010", "233"]
+let s:bgnd    = ["#181818", "234"]
+let s:bg1     = ["#282828", "235"]
+let s:bg2     = ["#453d41", "238"]
+let s:bg3     = ["#484848", "239"]
+let s:bg4     = ["#52494e", "240"]
+let s:red_1   = ["#c73c3f", "160"]
+let s:red     = ["#f43841", "196"]
+let s:red1    = ["#ff4f58", "203"]
+let s:green   = ["#73c936", "76" ]
+let s:yellow  = ["#ffdd33", "220"]
+let s:brown   = ["#cc8c3c", "172"]
+let s:quartz  = ["#95a99f", "108"]
+let s:niagara2= ["#303540", "236"]
+let s:niagara1= ["#565f73", "60" ]
+let s:niagara = ["#96a6c8", "147"]
+let s:wisteria= ["#9e95c7", "98" ]
 
 let s:bold      = "bold"
 let s:italic    = "italic"
@@ -60,53 +78,56 @@ endfunction
 " :help group-name
 " :help highlight-default
 
-call s:hl("ColorColumn",    { "bg": s:gray })
-call s:hl("Comment",        { "fg": s:brown })
-call s:hl("Constant",       { "fg": s:cyan })
-call s:hl("CursorLine",     { "bg": s:gray })
+call s:hl("ColorColumn",    { "bg": s:bg1 })
+call s:hl("Constant",       { "fg": s:quartz })
+call s:hl("CursorLine",     { "bg": s:bg1 })
 call s:hl("DiffAdd",        { "fg": s:green })
-call s:hl("DiffChange",     { "fg": s:blue })
+call s:hl("DiffChange",     { "fg": s:niagara })
 call s:hl("DiffDelete",     { "fg": s:red })
-call s:hl("DiffText",       { "fg": s:blue, "style": s:underline })
-call s:hl("Directory",      { "fg": s:blue })
-call s:hl("EndOfBuffer",    { "fg": s:black })
+call s:hl("DiffText",       { "fg": s:niagara, "style": s:underline })
+call s:hl("Directory",      { "fg": s:niagara })
+call s:hl("EndOfBuffer",    { "fg": s:bgnd })
 call s:hl("Error",          { "fg": s:red })
 call s:hl("ErrorMsg",       { "fg": s:red })
-call s:hl("FoldColumn",     { "fg": s:brown, "bg": s:black})
-call s:hl("Folded",         { "fg": s:brown, "bg": s:gray, "style": s:italic })
-call s:hl("Function",       { "fg": s:blue })
-call s:hl("Identifier",     { "fg": s:white })
-call s:hl("Ignore",         { "fg": s:black })
-call s:hl("LineNr",			{ "fg": s:mud})
-call s:hl("MatchParen",     { "fg": s:yellow, "style": s:bold })
+call s:hl("FoldColumn",     { "fg": s:brown, "bg": s:bgnd})
+call s:hl("Folded",         { "fg": s:brown, "bg": s:bg1, "style": s:italic })
+call s:hl("Ignore",         { "fg": s:bgnd })
+call s:hl("LineNr",			{ "fg": s:bg4})
+call s:hl("MatchParen",     { "bg": s:bg4,"style": s:bold })
 call s:hl("MoreMsg",        { "fg": s:green })
-call s:hl("NonText",        { "fg": s:blue })
-call s:hl("Normal",         { "fg": s:white, "bg": s:black })
-call s:hl("Pmenu",          { "fg": s:white, "bg": s:gray })
-call s:hl("PmenuSbar",      { "bg": s:gray })
-call s:hl("PmenuSel",       { "fg": s:black, "bg": s:yellow, "style": s:bold })
-call s:hl("PmenuThumb",     { "bg": s:black })
-call s:hl("PreProc",        { "fg": s:cyan })
-call s:hl("Question",       { "fg": s:blue })
-call s:hl("Special",        { "fg": s:white })
-call s:hl("SpecialChar",    { "fg": s:cyan })
+call s:hl("NonText",        { "fg": s:niagara })
+call s:hl("Normal",         { "fg": s:fgnd, "bg": s:bgnd })
+call s:hl("Pmenu",          { "fg": s:fgnd, "bg": s:bg1 })
+call s:hl("PmenuSbar",      { "bg": s:bg1 })
+call s:hl("PmenuSel",       { "fg": s:bgnd, "bg": s:yellow, "style": s:bold })
+call s:hl("PmenuThumb",     { "bg": s:bgnd })
+call s:hl("Question",       { "fg": s:niagara })
+call s:hl("Special",        { "fg": s:fgnd })
+call s:hl("SpecialChar",    { "fg": s:quartz })
 call s:hl("SpecialComment", { "fg": s:brown })
-call s:hl("SpecialKey",     { "fg": s:blue })
+call s:hl("SpecialKey",     { "fg": s:niagara })
 call s:hl("SpellBad",       { "fg": s:red, "style": s:underline })
-call s:hl("SpellCap",       { "fg": s:blue, "style": s:underline })
+call s:hl("SpellCap",       { "fg": s:niagara, "style": s:underline })
 call s:hl("SpellLocal",     { "fg": s:yellow, "style": s:underline })
 call s:hl("SpellRare",      { "style": s:underline })
 call s:hl("Statement",      { "fg": s:yellow, "style": s:bold })
-call s:hl("StatusLine",     { "fg": s:white, "bg": s:gray, "style": s:bold })
-call s:hl("StatusLineNC",   { "fg": s:white, "bg": s:gray })
-call s:hl("String",         { "fg": s:green })
-call s:hl("Title",          { "fg": s:white })
+call s:hl("StatusLine",     { "fg": s:fgnd, "bg": s:bg1, "style": s:bold })
+call s:hl("StatusLineNC",   { "fg": s:fgnd, "bg": s:bg1 })
+call s:hl("Title",          { "fg": s:fgnd })
 call s:hl("Todo",           { "fg": s:brown, "style": s:italic })
-call s:hl("Type",           { "fg": s:yellow, "style": s:bold })
 call s:hl("Underlined",     { "style": s:underline })
-call s:hl("VertSplit",      { "fg": s:gray })
+call s:hl("VertSplit",      { "fg": s:bg1 })
 call s:hl("WarningMsg",     { "fg": s:yellow })
-call s:hl("WildMenu",       { "fg": s:black, "bg": s:yellow, "style": s:bold })
+call s:hl("WildMenu",       { "fg": s:bgnd, "bg": s:yellow, "style": s:bold })
 call s:hl("diffAdded",      { "fg": s:green })
 call s:hl("diffRemoved",    { "fg": s:red })
-call s:hl("diffSubname",    { "fg": s:blue })
+call s:hl("diffSubname",    { "fg": s:niagara })
+
+"syntax
+call s:hl("Comment",        { "fg": s:brown })
+call s:hl("String",         { "fg": s:green })
+call s:hl("Identifier",     { "fg": s:fg1 })
+call s:hl("Function",       { "fg": s:niagara })
+" call s:hl("Keyword",        { "fg": s:yellow ,"style": s:bold })
+call s:hl("PreProc",        { "fg": s:quartz })
+call s:hl("Type",           { "fg": s:quartz })
