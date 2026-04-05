@@ -143,6 +143,7 @@ call s:hl("Keyword",        { "fg": s:yellow ,"style": s:bold })
 call s:hl("PreProc",        { "fg": s:quartz })
 call s:hl("Type",           { "fg": s:quartz })
 call s:hl("Number",         { "fg": s:white  })
+call s:hl("Operator",		{ "fg": s:fgnd	 })
 
 "syntax links
 hi! link StorageClass Keyword
