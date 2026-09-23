@@ -1,0 +1,92 @@
+Short name:      gruber
+Full name:       gruber
+Author:          Charan Mandati <charancuz008@gmail.com>
+Description:     port of gruber colorscheme by John Gruber
+Environments:    gui 256 16 8 0
+
+Background: dark
+
+;i => -1
+Color: fg0        #e4e4ef ~
+Color: fg1        #f4f4ff ~
+Color: fg2        #f5f5f5 ~
+Color: white      #ffffff ~
+Color: black      #000000 ~
+Color: bgi        #101010 ~
+Color: bg0        #181818 ~
+Color: bg1        #282828 ~
+Color: bg2        #453d41 ~
+Color: bg3        #484848 ~
+Color: bg4        #52494e ~
+Color: redi       #c73c3f ~
+Color: red        #f43841 ~
+Color: red1       #ff4f58 ~
+Color: green      #73c936 ~
+Color: yellow     #ffdd33 ~
+Color: brown      #cc8c3c ~
+Color: quartz     #95a99f ~
+Color: niagarai2  #303540 ~
+Color: niagarai   #565f73 ~
+Color: niagara    #96a6c8 ~
+Color: wisteria   #9e95c7 ~
+Color: titlebar   #202020 ~
+Color: titlenc    #797979 ~
+
+; Cursor       yellow bg0 reverse
+Cursor       fg      bg  reverse
+NonText      bg2     bg
+Normal       fg0     bg0
+CursorLine   fg      bg1
+DiffAdd      green   bg
+DiffDelete   red     bg
+DiffChange   niagara bg
+EndOfBuffer  bg1     bg
+Search       fg1     bg4
+CurSearch    black   fg2 bold
+SpecialKey   bg1     bg
+Visual       fg      bg3
+VertSplit    bg2     bg
+FoldColumn   bg2     bg
+LineNr       bg4     bg
+CursorLineNr yellow  bg
+MatchParen   bg      bg4 bold
+Pmenu        fg      bg1
+PmenuSel     fg      bgi
+PmenuSbar    bgi     bg2
+PmenuThumb   bg      bg
+PmenuMatch   green   bg
+StatusLine   fg      bg1 bold
+StatusLineNC quartz  bg1
+Tabline      fg      bg1
+TablineFill  fg      bg
+TablineSel   fg      bg4 bold
+TitleBar     fg      titlebar
+TitleBarNC   titlenc titlebar
+
+Comment    brown   bg
+Constant   quartz  bg
+String     green   bg
+Identifier fg1     bg
+Function   niagara bg
+Statement  yellow  bg bold
+PreProc    quartz  bg
+Type       quartz  bg
+UnderLined niagara bg  underline
+Todo       bg      wisteria
+
+
+CursorColumn ->  CursorLine
+Folded       ->  FoldColumn
+IncSearch    ->  CurSearch
+SignColumn   ->  FoldColumn
+Title        ->  Normal
+
+Character      ->  String
+Number         ->  Normal
+StorageClass   ->  Statement
+Structure      ->  Statement
+Typedef        ->  Statement
+Special        ->  Normal
+SpecialComment ->  Comment
+
+; vim :et
