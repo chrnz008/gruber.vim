@@ -49,7 +49,7 @@ VertSplit    bg2     bg
 FoldColumn   bg2     bg
 LineNr       bg4     bg
 CursorLineNr yellow  bg
-MatchParen   bg      bg4 bold
+; MatchParen   bg      bg4 bold
 Pmenu        fg      bg1
 PmenuSel     fg      bgi
 PmenuSbar    bgi     bg2
@@ -83,6 +83,7 @@ Title        ->  Normal
 
 Character      ->  String
 Number         ->  Normal
+Operator	   ->  Normal
 StorageClass   ->  Statement
 Structure      ->  Statement
 Typedef        ->  Statement
