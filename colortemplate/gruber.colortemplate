@@ -2,35 +2,35 @@ Short name:      gruber
 Full name:       gruber
 Author:          Charan Mandati <charancuz008@gmail.com>
 Description:     port of gruber colorscheme by John Gruber
-Environments:    gui 256 16 8 0
+Environments:    gui 256
 
 Background: dark
 
 ;i => -1
-Color: fg0        #e4e4ef ~
-Color: fg1        #f4f4ff ~
-Color: fg2        #f5f5f5 ~
-Color: white      #ffffff ~
-Color: black      #000000 ~
-Color: bgi        #101010 ~
-Color: bg0        #181818 ~
-Color: bg1        #282828 ~
-Color: bg2        #453d41 ~
-Color: bg3        #484848 ~
-Color: bg4        #52494e ~
-Color: redi       #c73c3f ~
-Color: red        #f43841 ~
-Color: red1       #ff4f58 ~
-Color: green      #73c936 ~
-Color: yellow     #ffdd33 ~
-Color: brown      #cc8c3c ~
-Color: quartz     #95a99f ~
-Color: niagarai2  #303540 ~
-Color: niagarai   #565f73 ~
-Color: niagara    #96a6c8 ~
-Color: wisteria   #9e95c7 ~
-Color: titlebar   #202020 ~
-Color: titlenc    #797979 ~
+Color: fg0        #e4e4ef 254
+Color: fg1        #f4f4ff 255
+Color: fg2        #f5f5f5 255
+Color: white      #ffffff 231
+Color: black      #000000 16
+Color: bgi        #101010 233
+Color: bg0        #181818 234
+Color: bg1        #282828 235
+Color: bg2        #453d41 238
+Color: bg3        #484848 238
+Color: bg4        #52494e 239
+Color: redi       #c73c3f 131
+Color: red        #f43841 203
+Color: red1       #ff4f58 203
+Color: green      #73c936 76
+Color: yellow     #ffdd33 220
+Color: brown      #cc8c3c 172
+Color: quartz     #95a99f 109
+Color: niagarai2  #303540 236
+Color: niagarai   #565f73 60
+Color: niagara    #96a6c8 110
+Color: wisteria   #9e95c7 103
+Color: titlebar   #202020 234
+Color: titlenc    #797979 243
 
 ; Cursor       yellow bg0 reverse
 Cursor       fg      bg  reverse
@@ -83,6 +83,7 @@ Title        ->  Normal
 
 Character      ->  String
 Number         ->  Normal
+Boolean 	   ->  Normal
 Operator	   ->  Normal
 StorageClass   ->  Statement
 Structure      ->  Statement
